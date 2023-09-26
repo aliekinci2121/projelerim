@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Philosopher:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --bgColor: #031d2e;
+  --secondaryColor: #17384e;
+  --whiteColor: #ffffff;
+  --OrangeColor: #ff7010;
+  --ff1: "Inter", sans-serif;
+  --ff2: "Philosopher", sans-serif;
+}
+
+body {
+  font-family: var(--ff1);
+  background-color: var(--bgColor);
+  color: var(--whiteColor);
+  line-height: 1.8;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 80rem;
+  width: 100%;
+  background-color: var(--secondaryColor);
+  border-radius: 1rem;
+  box-shadow: 0rem 0rem 1.6rem rgba(17, 17, 26, 0.1);
+}
+
+.top {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.top input {
+  padding: 1rem 1.5rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem 0 0 0.5rem;
+  font-family: var(--ff1);
+  font-size: 2.2rem;
+  height: 6rem;
+}
+
+.top input:focus::placeholder {
+  opacity: 0;
+}
+
+.top button {
+  padding: 1rem 1.5rem;
+  outline: none;
+  border: none;
+  background-color: var(--whiteColor);
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-size: 1.6rem;
+  height: 6rem;
+  cursor: pointer;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+}
+
+.results .image {
+  text-align: center;
+}
+
+.results .image img {
+  width: 70%;
+}
+
+.results .text .title {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.results .text .title::before {
+  content: "";
+  position: absolute;
+  width: 10rem;
+  height: 0.3rem;
+  left: 0;
+  bottom: 0.5rem;
+  background-color: var(--OrangeColor);
+}
+
+.results .text .title h2 {
+  font-family: var(--ff2);
+  font-size: 3.6rem;
+  text-transform: capitalize;
+}
+
+.results .text .title span {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  font-size: 1.76rem;
+  text-transform: capitalize;
+}
+
+.results .text p {
+  font-size: 1.6rem;
+}
+
+.results h1 {
+  text-align: center;
+  color: var(--OrangeColor);
+}
+
+.fade-in {
+  animation: fadeIn 3s;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
